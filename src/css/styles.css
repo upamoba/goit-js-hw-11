@@ -154,3 +154,10 @@ body {
     }
 
     @keyframes lineGrow {to {  background-size: 100% auto}}
+
+    .is-hidden {
+      display: flex;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+  
