@@ -1,18 +1,46 @@
-/**
-  |============================
-  | include css partials with
-  | default @import url()
-  |============================
-*/
-/* Common styles */
+
+@import 'https://cdn.jsdelivr.net/npm/css-loaders@1.0.0/css/css-loaders.min.css';
 @import url('./reset.css');
 @import url('./base.css');
-@import url('./container.css');
-@import url('./animations.css');
 
-/* Sections style */
-@import url('./header.css');
-@import url('./vite-promo.css');
-@import url('./badges.css');
-@import url('./back-link.css');
-@import url('./footer.css');
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.form {
+  margin-bottom: 20px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+}
+
+.gallery li {
+  flex-basis: calc(33.333% - 10px);
+}
+
+.gallery img {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+}
+
+.loader-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+
+.hidden {
+  display: none;
+}
+
+
+
