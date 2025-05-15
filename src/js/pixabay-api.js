@@ -13,11 +13,6 @@ export async function getImagesByQuery(query) {
     safesearch: true,
   };
 
-  try {
-    const response = await axios.get(BASE_URL, { params });
-    return response.data;
-  } catch (error) {
-    console.error('Error fetching images:', error.message);
-    throw error;
-  }
+  const response = await axios.get(BASE_URL, { params });
+  return response.data;
 }
