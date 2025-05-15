@@ -20,6 +20,7 @@ body {
   align-items: center;
   margin-bottom: 40px;
   gap: 12px;
+  padding-top: 20px;
 }
 
 .form input[type='text'] {
@@ -30,6 +31,8 @@ body {
   border-radius: 6px;
   outline: none;
   transition: border-color 0.3s;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  
 }
 
 .form input[type='text']:hover {
@@ -121,23 +124,31 @@ body {
   color: #fff !important;
 }
 
-.loader {
-    width: 48px;
-    height: 48px;
-    border: 5px solid #FFF;
-    border-bottom-color: #FF3D00;
-    border-radius: 50%;
-    display: inline-block;
-    box-sizing: border-box;
-    animation: rotation 1s linear infinite;
+.loader{
+      font-size: 48px;
+      color: #FFF;
+      display: inline-block;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 400;
+      position: relative;
+    }
+    .loader:after{
+      content: 'Loading';
+      position: relative;
+      z-index: 5;
+    }
+    .loader:before{
+      content: '';
+      height: 6px;
+      border: 1px solid;
+      border-radius: 10px;
+      width: 100%;
+      position: absolute;
+    
+      bottom: 0px;
+      background: linear-gradient(#FF3D00 100%, transparent 0) no-repeat;
+      background-size: 0% auto;
+      animation: 10s lineGrow linear infinite;
     }
 
-    @keyframes rotation {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-    } 
- 
+    @keyframes lineGrow {to {  background-size: 100% auto}}
