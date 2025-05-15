@@ -16,3 +16,6 @@ export async function getImagesByQuery(query) {
   const response = await axios.get(BASE_URL, { params });
   return response.data;
 }
+
+
+

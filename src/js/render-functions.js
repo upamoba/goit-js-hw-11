@@ -27,6 +27,7 @@ export function clearGallery() {
   gallery.innerHTML = '';
 }
 
+
 export function showLoader() {
   loader.classList.remove('is-hidden');
 }
